@@ -2,13 +2,22 @@ require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
 // const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
 // const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+const ALCHEMY_API_KEY = "https://eth-rinkeby.alchemyapi.io/v2/EedP4Mya0jSnJnvEDt4VMzdq84j0nmx0";
+const RINKEBY_PRIVATE_KEY = "YOUR RINKEBY PRIVATE KEY";
+// module.exports = {
+//   defaultNetwork: "hardhat",
+//   networks: {
+//     hardhat: {
+//       chainId: 1337
+//     },
 
 module.exports = {
-  defaultNetwork: "hardhat",
   networks: {
-    hardhat: {
-      chainId: 1337
+    rinkeby: {
+      url: "https://eth-rinkeby.alchemyapi.io/v2/EedP4Mya0jSnJnvEDt4VMzdq84j0nmx0",
+      accounts: [`${RINKEBY_PRIVATE_KEY}`]
     },
+
     /*
     mumbai: {
       // Infura
